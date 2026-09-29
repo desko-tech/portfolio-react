@@ -82,7 +82,7 @@ export const Collaboration = () => {
                 <div className="relative">
  
                 <div ref={imageRef} className="relative">
-                    <img src="../collaboration.svg" alt="AI-powered team collaboration"
+                    <img src={`${import.meta.env.BASE_URL}collaboration.svg`} alt="AI-powered team collaboration"
                         className={`h-[520px] w-full p-8 object-contain transition-transform duration-[1800ms] ease-out ${
                         isVisible ? "scale-110" : "scale-90"
                     }`}

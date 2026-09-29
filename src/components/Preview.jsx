@@ -100,7 +100,7 @@ const Preview = () => {
                 animate={{ opacity: 1 }} 
                 className="text-center py-6">
                 Well Done! All tasks completed! Time to relax. 
-                <img src='../relax-mode.svg' alt="Relaxed person sitting comfortably with a calm smile in a warm, minimal room with soft light and a small plant. The scene feels peaceful and restorative. Text on the image reads Well Done! All tasks completed! Time to relax." 
+                <img src={`${import.meta.env.BASE_URL}relax-mode.svg`} alt="Relaxed person sitting comfortably with a calm smile in a warm, minimal room with soft light and a small plant. The scene feels peaceful and restorative. Text on the image reads Well Done! All tasks completed! Time to relax." 
                      className='max-w-80 mt-10 mx-auto'/>
             </motion.p>
         )}
