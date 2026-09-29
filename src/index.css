@@ -1,0 +1,143 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+    /*
+    html {
+        background-color: #111827;
+        color: #fff;
+    } */
+
+    .task_card {
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+
+    .headline-1 {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+        font-weight: 800;
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+
+    .headline-1.light {
+        color: #e5e7eb;
+    }
+
+    @media (min-width: 640px) {
+        .headline-1 {
+            font-size: 3rem;
+            line-height: 1;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .headline-1 {
+            font-size: 3.75rem;
+            line-height: 1;
+        }
+    }
+}
+
+:root {
+    --header-text-color: #dadada; 
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 14px;
+}
+
+/* HEADER MENU */
+.header-menu {
+    color: var(--header-text-color);
+}
+
+.hamburger-button {
+    width: 34px;
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 0;
+}
+
+.hamburger-button .line {
+    width: 34px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: var(--header-text-color);
+    transform-origin: right;
+    transition: transform .4s, opacity .2s;
+}
+
+.hamburger-button.cross .line {
+    width: 32px;
+}
+
+.hamburger-button.cross .line:nth-last-of-type(1) {
+    transform: rotate(45deg);
+}
+
+.hamburger-button.cross .line:nth-last-of-type(2) {
+    opacity: 0;
+    transition: opacity 0;
+}
+
+.hamburger-button.cross .line:nth-last-of-type(3) {
+    transform: rotate(-45deg);
+}
+
+/* BUTTONS */
+button {
+    border-radius: 3rem;
+    padding: 0.5rem 1.5rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;    
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+}
+
+button:hover {
+    opacity: 0.95;
+}
+
+button.main {
+    background: linear-gradient(to right, #06b6d4, #d946ef);
+    box-shadow: 0 10px 15px -3px rgb(217 70 239 / 0.2), 0 4px 6px -4px rgb(217 70 239 / 0.2);
+}    
+
+button.secondary {
+    background-color: #1e293b;
+    border: 1px solid #26354d;
+}
+
+button.secondary:hover {
+    background-color: #30415f;
+    border: 1px solid #435572;
+}
+
+@media (min-width: 640px) {
+    button {
+        width: auto;
+    }
+}
+
+/* section tag */
+.section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    margin-bottom: 1.25rem;
+}
