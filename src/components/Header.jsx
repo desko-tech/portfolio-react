@@ -39,12 +39,10 @@ const Header = () => {
     });
 
     return (
-        <header className="fixed left-0 right-0 px-6 py-4 line-clamp-1 min-h-[4.3rem] bg-slate-900 bg-opacity-80 header-menu z-50">
-            <div className="items-center gap-2 absolute left-6 top-4">
-                <a href="/" className="flex items-center gap-2 font-bold text-lg tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-fuchsia-500">
-                    <Layers className="text-cyan-400 w-6 h-6 inline" /> TASKFUSION
-                </a>
-            </div> 
+        <header className="fixed flex content-between left-0 right-0 px-6 py-4 min-h-[var(--navigation-height)] bg-slate-900 bg-opacity-80 header-menu z-50">
+            <a href="/" className="flex items-center gap-2 font-bold text-lg tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-fuchsia-500">
+                <Layers className="text-cyan-400 w-6 h-6 inline" /> TASKFUSION
+            </a>
 
             {/* mobile navigation - hamburger menu */}
             <div className="sm:hidden absolute right-6 top-4">
@@ -56,10 +54,10 @@ const Header = () => {
             </div>
 
            {/* desktop navigation  */}
-           <nav className={`justify-center gap-2 sm:gap-5 ${toggleBurgerMenu ? 'flex' : 'hidden'} sm:flex flex-col sm:flex-row pt-12 pb-4 max-w-xs mx-auto sm:pt-[2px] sm:pb-0 sm:px-5`}>
+           <nav className={`nav-bar justify-center items-center gap-2 sm:gap-5 ${toggleBurgerMenu ? 'flex shadow-slate-500/50' : ''} sm:flex flex-col sm:flex-row mx-auto`}>
            {
                 menus.map((menuItem, i) => (
-                    <a key={i} href={`#${menuItem.key}`} className={`px-4 text-sm leading-4 py-1 rounded-3xl text-center uppercase transition-colors duration-500 hover:bg-cyan-600 ${activeNavSection == menuItem.key ? "bg-cyan-700" : ""}`}>{menuItem.name}</a>
+                    <a key={i} href={`#${menuItem.key}`} className={`px-4 sm:text-sm leading-4 py-2 rounded-3xl text-center uppercase transition-colors duration-500 hover:bg-cyan-600 ${activeNavSection == menuItem.key ? "bg-cyan-700" : ""}`}>{menuItem.name}</a>
                 ))
            }
            </nav>

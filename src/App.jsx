@@ -21,17 +21,17 @@ function App() {
       </section>
 
       {/* QUICK INTERACTIVE PREVIEW */}
-      <section id="demo" className="max-w-4xl mx-auto px-6 py-36">
+      <section id="demo" className="common-section max-w-4xl">
         <Preview />
       </section>
 
       {/* FEATURES */}
-      <section id="features" className="max-w-7xl mx-auto px-6">
+      <section id="features" className="common-section max-w-7xl">
         <Features />
       </section>
 
       {/* PRICING SECTION */}
-      <section id="pricing" className="max-w-3xl mx-auto px-6 py-24 text-center border-t border-slate-900">
+      <section id="pricing" className="common-section text-center max-w-3xl">
         <Pricing />
       </section>
 

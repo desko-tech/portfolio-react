@@ -26,7 +26,7 @@ const Hero = () => {
     }, []);
 
     return (
-      <section className="relative max-w-7xl mx-auto px-6 pt-40 pb-28 text-center">
+      <section className="relative max-w-7xl common-section hero-text text-center">
         {/* Background glow */}
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-fuchsia-500/10 blur-[120px] pointer-events-none rounded-full" />
         <div className="absolute top-1/3 left-1/3 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-500/10 blur-[120px] pointer-events-none rounded-full" />
@@ -73,7 +73,7 @@ const Hero = () => {
             Connect your thoughts, plan your to-dos, and achieve your goals with the most elegant and fastest task manager of the next generation.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <a href="#demo">    
                 <button className="main group">
                     Get Started 

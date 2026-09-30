@@ -2,19 +2,12 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+:root {
+    --header-text-color: #dadada; 
+    --navigation-height: 4.3em;
+}
+
 @layer base {
-    /*
-    html {
-        background-color: #111827;
-        color: #fff;
-    } */
-
-    .task_card {
-        padding: 0.5rem 0.75rem;
-        border-radius: 0.5rem;
-        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    }
-
     .headline-1 {
         font-size: 2.25rem;
         line-height: 2.5rem;
@@ -42,14 +35,18 @@
     }
 }
 
-:root {
-    --header-text-color: #dadada; 
-}
-
 html {
     scroll-behavior: smooth;
     font-size: 14px;
 }
+
+input {
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+}   
 
 /* HEADER MENU */
 .header-menu {
@@ -92,10 +89,44 @@ html {
     transform: rotate(-45deg);
 }
 
+header {
+    z-index: 5;
+}
+
+@media (max-width: 640px) {
+    .nav-bar {
+        visibility: hidden;
+        position: absolute;
+        top: var(--navigation-height);
+        left: 0;
+        right: 0;
+        width: 100vw; 
+        row-gap: 1rem;
+        padding: 3rem 3rem 4rem 3rem; 
+        background: rgb(15 23 42 / 0.8); 
+        box-shadow: 0px 5px 10px -5px #000000;
+        max-height: 0; 
+        border-bottom-left-radius: 1.5em;
+        border-bottom-right-radius: 1.5em;
+        transition: max-height .5s; 
+        z-index: 4;
+    }
+
+     .nav-bar.flex {
+        visibility: visible;
+        max-height: 80vh;
+    }
+
+    .nav-bar > a {
+        width: 80vw;
+        padding: .8rem 1rem;
+    }
+}
+
 /* BUTTONS */
 button {
     border-radius: 3rem;
-    padding: 0.5rem 1.5rem;
+    padding: .7rem 1.5rem;
     font-weight: 400;
     display: flex;
     align-items: center;
@@ -130,6 +161,16 @@ button.secondary:hover {
     }
 }
 
+.common-section {
+    padding: 8em 5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.common-section.hero-text {
+    padding-top: 11rem;
+}
+
 /* section tag */
 .section-tag {
     display: inline-flex;
@@ -140,4 +181,11 @@ button.secondary:hover {
     font-weight: 500;
     padding: 0.25rem 0.75rem;
     margin-bottom: 1.25rem;
+}
+
+@media (max-width: 640px) {
+    .common-section {
+        padding-left:2rem;
+        padding-right: 2rem;
+    }
 }
