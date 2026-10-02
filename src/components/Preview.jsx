@@ -48,7 +48,7 @@ const Preview = () => {
                 placeholder="Type a new task..."
                 className="flex-1 bg-slate-900 border border-slate-500 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 text-slate-200 placeholder:text-slate-500 transition-all"
             />
-            <button type="submit" className="px-4 py-3 text-cyan-50 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors flex items-center justify-center">
+            <button aria-label="Add task" type="submit" className="px-4 py-3 text-cyan-50 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors flex items-center justify-center">
                 <Plus className="w-5 h-5" />
             </button>
         </form>
@@ -69,7 +69,7 @@ const Preview = () => {
                         : 'bg-slate-950 border-slate-600/70 hover:border-cyan-800'
                     }`}>
                     <div className="flex items-center gap-3 flex-1 min-w-0">
-                        <button type="button" 
+                        <button type="button"
                             title={task.completed ? 'Mark as incomplete' : 'Mark as complete'}    
                             onClick={() => toggleTask(task.id)}
                             className="text-slate-700 hover:text-cyan-400 transition-colors shrink-0">

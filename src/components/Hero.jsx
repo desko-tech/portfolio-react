@@ -75,13 +75,13 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <a href="#demo">    
-                <button className="main group">
+                <button aria-label="Get Started" className="main group">
                     Get Started 
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
             </a>
             <a href="#features">
-                <button className="secondary">
+                <button aria-label="View Features" className="secondary">
                     View Features
                 </button>
             </a>    

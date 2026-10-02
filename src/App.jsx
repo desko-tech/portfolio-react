@@ -15,25 +15,27 @@ function App() {
     <div className="min-h-screen bg-slate-950 text-slate-200">
       <Header />
 
-      <section id="overview">  
-        <Hero />
-        <Collaboration />
-      </section>
+      <main>
+        <section id="overview">  
+          <Hero />
+          <Collaboration />
+        </section>
 
-      {/* QUICK INTERACTIVE PREVIEW */}
-      <section id="demo" className="common-section max-w-4xl">
-        <Preview />
-      </section>
+        {/* QUICK INTERACTIVE PREVIEW */}
+        <section id="demo" className="common-section max-w-4xl">
+          <Preview />
+        </section>
 
-      {/* FEATURES */}
-      <section id="features" className="common-section max-w-7xl">
-        <Features />
-      </section>
+        {/* FEATURES */}
+        <section id="features" className="common-section max-w-7xl">
+          <Features />
+        </section>
 
-      {/* PRICING SECTION */}
-      <section id="pricing" className="common-section text-center max-w-3xl">
-        <Pricing />
-      </section>
+        {/* PRICING SECTION */}
+        <section id="pricing" className="common-section text-center max-w-3xl">
+          <Pricing />
+        </section>
+      </main>
 
       {/* FOOTER */}
       <Footer/>

@@ -46,7 +46,7 @@ const Header = () => {
 
             {/* mobile navigation - hamburger menu */}
             <div className="sm:hidden absolute right-6 top-4">
-                <button className={`hamburger-button ${toggleBurgerMenu ? 'cross': ''}`} onClick={() => setToggleBurgerMenu(!toggleBurgerMenu)}>
+                <button aria-label="Toggle navigation menu" className={`hamburger-button ${toggleBurgerMenu ? 'cross': ''}`} onClick={() => setToggleBurgerMenu(!toggleBurgerMenu)}>
                     <div className="line"></div>
                     <div className="line"></div>
                     <div className="line"></div>
