@@ -65,7 +65,7 @@ const Preview = () => {
                     transition={{ duration: 0.3, ease: [0.2, 1, 0.6, 1] }}
                     className={`flex items-center justify-between p-4 rounded-lg border transition-all ${
                     task.completed 
-                        ? 'bg-slate-950/40 border-slate-700 opacity-60 hover:border-cyan-900' 
+                        ? 'bg-slate-950/40 border-slate-700 opacity-90 hover:border-cyan-900' 
                         : 'bg-slate-950 border-slate-600/70 hover:border-cyan-800'
                     }`}>
                     <div className="flex items-center gap-3 flex-1 min-w-0">
